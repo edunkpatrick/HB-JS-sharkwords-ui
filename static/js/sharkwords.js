@@ -58,6 +58,9 @@ const generateLetterButtons = (ALPHABET) => {
 //
 const disableLetterButton = (buttonEl) => {
   // Replace this with your code
+  // disableLetterButton.setAttribute('buttonEl', true);
+  // document.buttonEl.disabled = true;
+  buttonEl.disabled = true;
 };
 
 // This is a helper function we will use in the future
@@ -65,8 +68,13 @@ const disableLetterButton = (buttonEl) => {
 // For now, you should test it out to make sure it works
 
 const isLetterInWord = (letter, word) => {
-  // Replace this with your code
-};
+  if (letter in word) {
+    return true; 
+  } else {
+    return false;
+  }
+  };
+
 
 // This is like if __name__ == '__main__' in Python
 // It will be called when the file is run (because
